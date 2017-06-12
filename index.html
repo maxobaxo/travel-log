@@ -28,7 +28,10 @@
             </div>
             <div class="form-group">
               <label for="country">Country</label>
-              <input id="country" type="text" name="name" value="">
+              <select class="form-control" id="country">
+                <option>USA</option>
+                <option>Canada</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="memory">Favorite Memory</label>
@@ -58,6 +61,7 @@
           <div id="show-location">
             <h2></h2>
 
+            <p>Country Flag: <br><span class="flag"></span></p>
             <p>State/Province: <span class="state"></span></p>
             <p>Country: <span class="country"></span></p>
             <p>Favorite Memory: <span class="memory"></p>

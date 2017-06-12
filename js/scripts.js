@@ -13,6 +13,7 @@ Location.prototype.destination = function() {
   return this.city + ", " + this.country;
 }
 
+
 //user inferface logic
 $(document).ready(function() {
   $("form#new-location").submit(function(event) {
@@ -20,19 +21,22 @@ $(document).ready(function() {
 
     var inputtedCity = $("input#city").val();
     var inputtedState = $("input#state").val();
-    var inputtedCountry = $("input#country").val();
+    var inputtedCountry = $("#country").val();
+    var countryFlag = new Image();
+    countryFlag.src = "img/" + inputtedCountry + ".png"
     var inputtedMemory = $("input#memory").val();
     var inputtedAttraction = $("input#attraction").val();
     var inputtedFood = $("input#food").val();
     var inputtedMusic = $("input#music").val();
-
     var newLocation = new Location(inputtedCity, inputtedState, inputtedCountry, inputtedMemory, inputtedAttraction, inputtedFood, inputtedMusic);
 
     $("ul#locations").append("<li><span class='location'>" + newLocation.destination() + "</span></li>");
 
     $(".location").last().click(function() {
+      $(".flag").empty("<img src='img/" + inputtedCountry + ".png'>");
         $("#show-location").show();
         $("#show-location h2").text(newLocation.city);
+        $(".flag").append("<img src='img/" + inputtedCountry + ".png'>");
         $(".state").text(newLocation.state);
         $(".country").text(newLocation.country);
         $(".memory").text(newLocation.memory);
