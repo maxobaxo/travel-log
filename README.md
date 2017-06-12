@@ -15,7 +15,13 @@ This web application allows a user to input information about places (s)he has b
 
 ## Specifications ##
 * It can return a list of travel destinations based on user input.
+  Input1: Seattle, USA
+  Input2: Lexington, USA
+  Output: [Seattle, USA] [Lexington, USA]
+
 * It can show more details about a specific location when a user clicks on that destination.
+  Click: Seattle, USA
+  Output: [Country: USA, Main Attraction: Pike Place Market]
 
 ## Languages Used ##
 Git,
